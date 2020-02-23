@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 public class FoodActivity extends AppCompatActivity {
 
+
     ListView vendorsListView;
     String mName[] = {"Subway", "Pizza Hut", "Pappa John's", "McDonalds", "Qdoba"};
     String mLocation[] = {"temp address 123", "temp address 123","temp address 123", "temp address 123", "temp address 123"};

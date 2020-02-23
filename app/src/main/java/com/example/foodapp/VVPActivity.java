@@ -11,7 +11,7 @@ public class VVPActivity extends AppCompatActivity
 {
 
     //declaring fields and buttons
-    private Button vendorBttn, volunBttn, citizenBttn, backBttn;
+    private Button vendorBttn, volunBttn, citizenBttn, logOutBttn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -20,12 +20,12 @@ public class VVPActivity extends AppCompatActivity
         setContentView(R.layout.activity_vvp);
 
         //linking variables to buttons & text
-        backBttn = findViewById(R.id.logOutBttn);
+        logOutBttn = findViewById(R.id.logOutBttn);
         volunBttn = findViewById(R.id.volunBttn);
         citizenBttn = findViewById(R.id.citizenBttn);
         vendorBttn = findViewById(R.id.vendorBttn);
 
-        backBttn.setOnClickListener(new View.OnClickListener() {
+        logOutBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
