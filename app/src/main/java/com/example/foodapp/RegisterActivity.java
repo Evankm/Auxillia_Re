@@ -3,6 +3,7 @@ package com.example.foodapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -33,18 +34,20 @@ public class RegisterActivity extends AppCompatActivity {
 
         //linking variables to buttons & text
         regLoginBtn = findViewById(R.id.currentUserBttn);
+        regBtn = findViewById(R.id.regBttn);
         regEmail = findViewById(R.id.regEmail);
         regPass = findViewById(R.id.regPass);
         regConfirmPass = findViewById(R.id.regConfirmPass);
-        regBtn = findViewById(R.id.regBttn);
+
+
 
         // on click triggers toLogin method to send user to login page
-        regBtn.setOnClickListener(new View.OnClickListener()
+        regLoginBtn.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                Register();
+                toLogin();
             }
         });
 
@@ -89,6 +92,14 @@ public class RegisterActivity extends AppCompatActivity {
     {
         Intent registerIntent = new Intent (RegisterActivity.this, VVPActivity.class);
         startActivity(registerIntent);
+        finish();
+    }
+
+    //sends user to login page
+    private void toLogin()
+    {
+        Intent loginIntent = new Intent (RegisterActivity.this, LoginActivity.class);
+        startActivity(loginIntent);
         finish();
     }
 }
