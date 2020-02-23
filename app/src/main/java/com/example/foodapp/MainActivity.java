@@ -14,7 +14,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -24,12 +26,20 @@ public class MainActivity extends AppCompatActivity
     String mLocation[] = {"temp address 123", "temp address 123","temp address 123", "temp address 123", "temp address 123"};
     String mDestination [] = {"temp address 123", "temp address 123","temp address 123", "temp address 123", "temp address 123"};
     private Button logout;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //linking variables to buttons & text
+        logout = findViewById(R.id.logOutBttn);
+        mAuth = FirebaseAuth.getInstance();
+
+        //Checks for signed in user
+        FirebaseUser currentUser = mAuth.getCurrentUser();
 
         vendorsListView = findViewById(R.id.listView);
         VendorAdapter adapter = new VendorAdapter(this, mName, mLocation, mDestination);
@@ -38,6 +48,23 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 startActivity(new Intent(MainActivity.this, MapsActivity.class));
+            }
+        });
+
+        // if no signed in user send to login page, else display name
+        if (currentUser == null)
+        {
+            // beams user to the login page
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
+        // on click triggers logout method to send user to login page
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                logOut();
             }
         });
     }
@@ -73,20 +100,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    protected void onStart()
-    {
-        super.onStart();
-
-        logout.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                logOut();
-            }
-        });
-    }
 
      void logOut()
     {

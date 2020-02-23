@@ -13,7 +13,7 @@ public class LoginActivity extends AppCompatActivity
 {
     //declaring fields and buttons
     private EditText loginEmailText;
-    private Button loginBttn, loginRegBttn;
+    private Button loginBttn, loginRegBtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
@@ -24,17 +24,36 @@ public class LoginActivity extends AppCompatActivity
         //linking variables to buttons & text
         loginEmailText = findViewById(R.id.loginEmail);
         loginBttn = findViewById(R.id.loginBttn);
-        loginRegBttn = findViewById(R.id.loginRegBttn);
+        loginRegBtn = findViewById(R.id.loginRegBttn);
 
         // on click triggers register method to send user to register page
-        loginRegBttn.setOnClickListener(new View.OnClickListener()
+        loginRegBtn.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 Register();
             }
         });
 
+        // on click triggers login method to send user to select page
+        loginBttn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Login();
+            }
+        });
+
+    }
+
+    //sends user to select page
+    private void Login()
+    {
+        Intent loginIntent = new Intent (LoginActivity.this, VVPActivity.class);
+        startActivity(loginIntent);
+        finish();
     }
 
     //sends user to register page
