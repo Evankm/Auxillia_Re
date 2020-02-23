@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ADAAAA"
+    android:background="#F0F0F0"
     tools:context=".LoginActivity">
 
     <EditText
@@ -42,9 +42,10 @@
         android:id="@+id/loginBttn"
         android:layout_width="130dp"
         android:layout_height="60dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/custom_button"
         android:text="@string/loginBttn"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,9 +55,10 @@
         android:id="@+id/loginRegBttn"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/custom_button"
         android:text="@string/RegisterBttn"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -68,14 +70,10 @@
         android:id="@+id/imageView"
         android:layout_width="174dp"
         android:layout_height="227dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="97dp"
-        android:layout_marginBottom="53dp"
-        app:layout_constraintBottom_toTopOf="@+id/loginEmail"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteY="36dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
