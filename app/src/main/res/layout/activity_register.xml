@@ -63,4 +63,15 @@
         app:layout_constraintTop_toBottomOf="@+id/regConfirmPass"
         app:layout_constraintVertical_bias="0.391"
         tools:text="Go Back" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/regBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="136dp"
+        android:text="@string/RegBttn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
