@@ -11,26 +11,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
 
     ListView vendorsListView;
     String mName[] = {"Subway", "Pizza Hut", "Pappa John's", "McDonalds", "Qdoba"};
     String mLocation[] = {"temp address 123", "temp address 123","temp address 123", "temp address 123", "temp address 123"};
     String mDestination [] = {"temp address 123", "temp address 123","temp address 123", "temp address 123", "temp address 123"};
+    private Button logout;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         vendorsListView = findViewById(R.id.listView);
         VendorAdapter adapter = new VendorAdapter(this, mName, mLocation, mDestination);
         vendorsListView.setAdapter(adapter);
-
         vendorsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -38,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    class VendorAdapter extends ArrayAdapter<String> {
+
+    class VendorAdapter extends ArrayAdapter<String>
+    {
         Context context;
         String rName[];
         String rLocation[];
@@ -66,6 +71,14 @@ public class MainActivity extends AppCompatActivity {
             destination.setText(rDestination[position]);
 
             return view;
+
+        }
+
+        public void logOut()
+        {
+            Intent loginIntent = new Intent (MainActivity.this, LoginActivity.class);
+            startActivity(loginIntent);
+            finish();
         }
     }
 }
