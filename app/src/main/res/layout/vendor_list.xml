@@ -10,16 +10,15 @@
         android:id="@+id/VendorName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontStyle="normal"
         android:text="Vendor"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:fontStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintHorizontal_bias="0.033"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021"
         tools:text="Company Name" />
 
     <TextView
@@ -28,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
         android:layout_marginTop="12dp"
-        android:text="Vendors location"
+        android:text="Vendors:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/VendorName" />
 
@@ -38,7 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
-        android:text="Destination : "
+        android:text="Destination: "
+        android:textColor="#F43636"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -48,7 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
-        android:text="Pick up location :"
+        android:text="Pick-up:"
+        android:textColor="#3F51B5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/VendorName" />
 
@@ -58,9 +59,21 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="12dp"
-        android:text="Destination : "
+        android:text="Destination: "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vendorLocation" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toEndOf="@+id/vendorLocation"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_directions_car_black_24dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

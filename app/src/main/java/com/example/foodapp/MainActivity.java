@@ -32,6 +32,25 @@ public class MainActivity extends AppCompatActivity
     private Button logout;
     private FirebaseAuth mAuth;
 
+    //famous food places
+    String mName[] = {"Subway", "Pizza Hut", "Pappa John's", "McDonalds", "Qdoba", "Sodexo"};
+
+    //randomly generated addresses
+    String mLocation[] = {"9940 Big Rock Cove St.\n" + "Hilliard, MO 43026",
+            "79 West Prince St.\n" + "Cranberry Twp, MO 16066",
+            "49 Hilltop Road\n" + "Severna Park, MO 21146",
+            "9357 W. Littleton Dr.\n" + "Summerfield, MO 34491",
+            "9986 Gulf Court\n" + "Unit 96\n" + "Bensalem, MO 19020",
+            "326 Hillside Lane\n" + "Mchenry, MO 60050"};
+
+    //randomly generated addresses 2.0
+    String mDestination [] = {"       864 Riverside Street\n" + "       Livonia, MO 48150",
+            "       35 Cherry Rd.\n" + "       North Brunswick, MO 08902",
+            "       9593 Cottage St.\n" + "       Monroe Township, MO 08831",
+            "       8 Indian Spring Street\n" + "       Rolla, MO 65401",
+            "       69 Corona Court\n" + "       Naples, MO 34116",
+            "       7615 Bayberry Rd.\n" + "       Champaign, MO 61821"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
