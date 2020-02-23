@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                toLogin();
+                Register();
             }
         });
 
