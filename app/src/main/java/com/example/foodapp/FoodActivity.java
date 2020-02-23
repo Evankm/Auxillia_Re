@@ -1,10 +1,8 @@
 package com.example.foodapp;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class VendorMoreActivity extends AppCompatActivity {
+public class FoodActivity extends AppCompatActivity {
 
     ListView vendorsListView;
     String mName[] = {"Subway", "Pizza Hut", "Pappa John's", "McDonalds", "Qdoba"};
@@ -42,7 +39,7 @@ public class VendorMoreActivity extends AppCompatActivity {
             vendorsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    startActivity(new Intent(VendorMoreActivity.this, MapsActivity.class));
+                    startActivity(new Intent(FoodActivity.this, MapsActivity.class));
                     finish() ;
                 }
             });
@@ -68,7 +65,7 @@ public class VendorMoreActivity extends AppCompatActivity {
         @Override
         public View getView(int position, @NonNull View convertView, @NonNull ViewGroup parent){
             LayoutInflater layoutInflater = (LayoutInflater)getApplicationContext().getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            View view = layoutInflater.inflate(R.layout.vendor_more_list,parent, false);
+            View view = layoutInflater.inflate(R.layout.vendor_food,parent, false);
             TextView name = view.findViewById(R.id.VendorMoreName);
             TextView location = view.findViewById(R.id.vendorMoreLocation);
             TextView destination = view.findViewById(R.id.VendorMoreDestination);
