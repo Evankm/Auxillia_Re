@@ -14,7 +14,7 @@
         android:layout_marginBottom="284dp"
         android:background="@drawable/custom_textbox2"
         android:text="@string/vendorBttn"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
