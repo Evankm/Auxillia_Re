@@ -96,8 +96,7 @@
         android:text="@string/CurrentBttn"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Go Back" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/regBttn"
