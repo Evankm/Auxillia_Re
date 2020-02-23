@@ -11,12 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 public class FoodActivity extends AppCompatActivity {
 
-
+    //declaring fields and buttons
+    Button logOutBttn;
     ListView vendorsListView;
     String mName[] = {"Subway", "Pizza Hut", "Pappa John's", "McDonalds", "Qdoba"};
     String mLocation[] = {"temp address 123", "temp address 123","temp address 123", "temp address 123", "temp address 123"};
@@ -32,7 +34,8 @@ public class FoodActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vendor_more);
 
-
+            //linking variables to buttons & text
+            logOutBttn = findViewById(R.id.logOutBttn);
             vendorsListView = findViewById(R.id.VendorMoreListView);
             VendorMoreAdapter adapter = new VendorMoreAdapter(this, mName, mLocation, mDestination, mDiscription);
             vendorsListView.setAdapter(adapter);
@@ -44,6 +47,14 @@ public class FoodActivity extends AppCompatActivity {
                     finish() ;
                 }
             });
+
+            logOutBttn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view)
+                {
+                    toLogin();
+                }
+            });
         }
 
     private class VendorMoreAdapter extends ArrayAdapter<String>{
@@ -52,6 +63,7 @@ public class FoodActivity extends AppCompatActivity {
         String rLocation[];
         String rDestination[];
         String rDiscription[];
+
 
         VendorMoreAdapter(Context c, String name[], String location[], String destination[], String discription[]){
             super(c, R.layout.vendor_list, R.id.VendorName, name );
@@ -77,6 +89,14 @@ public class FoodActivity extends AppCompatActivity {
 
             return view;
         }
+    }
+
+    //sends user to login page
+    private void toLogin()
+    {
+        Intent loginIntent = new Intent (FoodActivity.this, LoginActivity.class);
+        startActivity(loginIntent);
+        finish();
     }
 
 }
