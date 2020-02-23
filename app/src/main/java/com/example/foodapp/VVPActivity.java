@@ -32,12 +32,19 @@ public class VVPActivity extends AppCompatActivity
         });
     }
 
-
     //sends user to login page
     private void toLogin()
     {
         Intent loginIntent = new Intent (VVPActivity.this, LoginActivity.class);
         startActivity(loginIntent);
+        finish();
+    }
+
+    //sends user to volun page
+    private void toVolun()
+    {
+        Intent volunIntent = new Intent (VVPActivity.this, MainActivity.class);
+        startActivity(volunIntent);
         finish();
     }
 }
