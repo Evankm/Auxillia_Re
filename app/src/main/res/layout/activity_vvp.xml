@@ -59,4 +59,17 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:text="GO BACK" />
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="274dp"
+        android:layout_height="427dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="116dp"
+        app:layout_constraintBottom_toTopOf="@+id/citizenBttn"
+        app:layout_constraintEnd_toStartOf="@+id/citizenBttn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logo2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
