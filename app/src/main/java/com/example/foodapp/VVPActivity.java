@@ -22,12 +22,20 @@ public class VVPActivity extends AppCompatActivity
 
         //linking variables to buttons & text
         backBttn = findViewById(R.id.backBttn);
+        volunBttn = findViewById(R.id.volunBttn);
 
         backBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
                 toLogin();
+            }
+        });
+
+        volunBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toVolun();
             }
         });
     }

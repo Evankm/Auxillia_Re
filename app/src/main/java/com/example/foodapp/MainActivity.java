@@ -58,13 +58,13 @@ public class MainActivity extends AppCompatActivity
         });
 
         // if no signed in user send to login page, else display name
-        if (currentUser == null)
-        {
-            // beams user to the login page
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-            startActivity(intent);
-            finish();
-        }
+//        if (currentUser == null)
+//        {
+//            // beams user to the login page
+//            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+//            startActivity(intent);
+//            finish();
+//        }
 
         // on click triggers logout method to send user to login page
         logout.setOnClickListener(new View.OnClickListener() {
