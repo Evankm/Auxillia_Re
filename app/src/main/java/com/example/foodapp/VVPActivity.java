@@ -25,6 +25,7 @@ public class VVPActivity extends AppCompatActivity
         backBttn = findViewById(R.id.backBttn);
         volunBttn = findViewById(R.id.volunBttn);
         citizenBttn = findViewById(R.id.citizenBttn);
+        vendorBttn = findViewById(R.id.vendorBttn);
 
         backBttn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +48,14 @@ public class VVPActivity extends AppCompatActivity
                 toVendorMore();
             }
         });
+
+        vendorBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                toDonor();
+            }
+        });
     }
 
     //sends user to login page
@@ -56,7 +65,6 @@ public class VVPActivity extends AppCompatActivity
         startActivity(loginIntent);
         finish();
     }
-
     //sends user to volun page
     private void toVolun()
     {
@@ -64,10 +72,18 @@ public class VVPActivity extends AppCompatActivity
         startActivity(volunIntent);
         finish();
     }
+    //sends user to vendor page
     private void toVendorMore()
     {
         Intent venMoreIntent = new Intent (VVPActivity.this, VendorMoreActivity.class);
         startActivity(venMoreIntent);
+        finish();
+    }
+
+    private void toDonor()
+    {
+        Intent donorIntent = new Intent (VVPActivity.this, donorActivity.class);
+        startActivity(donorIntent);
         finish();
     }
 }

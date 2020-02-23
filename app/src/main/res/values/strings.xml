@@ -15,4 +15,6 @@
     <string name="CurrentBttn">Current User?</string>
     <string name="vendorBttn">AVAILABLE</string>
     <string name="RegBttn">Register</string>
+    <string name="foodBttn">Available</string>
+    <string name="closeBttn">Finish</string>
 </resources>
