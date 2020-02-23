@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity
+{
 
     //declaring fields and buttons
     private EditText regEmail, regPass, regConfirmPass;
@@ -22,36 +23,18 @@ public class RegisterActivity extends AppCompatActivity {
 
         //linking variables to buttons & text
         regLoginBtn = findViewById(R.id.currentUserBttn);
+        regBttn = findViewById(R.id.regBttn);
 
         // on click triggers toLogin method to send user to login page
-        regLoginBtn.setOnClickListener(new View.OnClickListener()
+        regBttn.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                toLogin();
+                Register();
             }
         });
 
-        regLoginBtn.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                toVend();
-            }
-        });
-    }
-
-
-
-
-    //sends user to login page
-    private void toLogin()
-    {
-        Intent loginIntent = new Intent (RegisterActivity.this, LoginActivity.class);
-        startActivity(loginIntent);
-        finish();
     }
 
     //sends user to select page
@@ -61,12 +44,4 @@ public class RegisterActivity extends AppCompatActivity {
         startActivity(registerIntent);
         finish();
     }
-
-    private void toVend()
-    {
-        Intent vendIntent = new Intent (RegisterActivity.this, VendorButtonActivity.class);
-        startActivity(vendIntent);
-        finish();
-    }
-
 }
