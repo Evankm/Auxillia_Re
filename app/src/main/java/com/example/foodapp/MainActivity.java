@@ -67,14 +67,13 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        // if no signed in user send to login page, else display name
-//        if (currentUser == null)
-//        {
-//            // beams user to the login page
-//            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-//            startActivity(intent);
-//            finish();
-//        }
+        //if no signed in user send to login page, else display name
+        if (currentUser == null)
+        {
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         // on click triggers logout method to send user to login page
         logout.setOnClickListener(new View.OnClickListener() {
@@ -119,6 +118,7 @@ public class MainActivity extends AppCompatActivity
 
      void logOut()
     {
+        mAuth.signOut();
         Intent loginIntent = new Intent (MainActivity.this, LoginActivity.class);
         startActivity(loginIntent);
         finish();
