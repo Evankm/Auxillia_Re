@@ -29,12 +29,13 @@ public class MainActivity extends AppCompatActivity{
     String mName[] = {"Subway", "Pizza Hut", "Pappa John's", "McDonalds", "Qdoba"};
     String mLocation[] = {"temp address 123", "temp address 123","temp address 123", "temp address 123", "temp address 123"};
     String mDestination [] = {"temp address 123", "temp address 123","temp address 123", "temp address 123", "temp address 123"};
+    private Button btn;
 
-    ///private Button logOut = (Button) findViewById(R.id.logOut);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         vendorsListView = findViewById(R.id.listView);
         VendorAdapter adapter = new VendorAdapter(this, mName, mLocation, mDestination);
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 startActivity(new Intent(MainActivity.this, MapsActivity.class));
+                finish();
             }
         });
     }
@@ -76,6 +78,7 @@ public class MainActivity extends AppCompatActivity{
 
             return view;
         }
+
     }
 }
 
