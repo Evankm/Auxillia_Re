@@ -20,14 +20,14 @@ import android.widget.TextView;
 public class VendorMoreActivity extends AppCompatActivity {
 
     ListView vendorsListView;
-    String mName[] = {"Subway", "Pizza Hut", "Pappa John's", "McDonalds", "Qdoba"};
-    String mLocation[] = {"temp address 123", "temp address 123","temp address 123", "temp address 123", "temp address 123"};
-    String mDestination [] = {"temp address 123", "temp address 123","temp address 123", "temp address 123", "temp address 123"};
-    String mDiscription [] = {"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolo",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolo",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolo",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolo",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolo"};
+    String mName[] = {"Subway", "Pizza Hut", "Papa John's", "McDonalds", "Qdoba", "Sodexo"};
+    //strings not being used deleted
+    String mDiscription [] = {"5 lbs. Herbs Cilantro, 6 lbs. Lettuce, 7 lbs. Olives, 10 lbs. Bread.",
+            "20 lbs. Cheese, 10 lbs. Chicken, 10 lbs. Garlic, 15 lbs. Flour, 20 lbs. Tomatoes.",
+            "13 lbs. Flour, 23 lbs. Parsley, 10 lbs. Pepperoni, 10 lbs. Sausage, 15 lbs. Lettuce.",
+            "15 lbs. Bread, 13 lbs. Beef, 7 lbs. Onions, 13 lbs. Potatoes, Lettuce.",
+            "23 lbs. Beans, 12 lbs. Rice, 23 lbs. Lettuce, 14 lbs. Onions, 7 lbs. Guacamole, 12 lbs. Tomatoes, 7 lbs. Cilantro.",
+            "12 lbs. Chicken, 12 lbs. Beef, 12 lbs. Tomatoes, 8 lbs. Lettuce, 23 lbs. Rice, 23 lbs.Bread."};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class VendorMoreActivity extends AppCompatActivity {
 
 
             vendorsListView = findViewById(R.id.VendorMoreListView);
-            VendorMoreAdapter adapter = new VendorMoreAdapter(this, mName, mLocation, mDestination, mDiscription);
+            VendorMoreAdapter adapter = new VendorMoreAdapter(this, mName, mDiscription);
             vendorsListView.setAdapter(adapter);
 
             vendorsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -51,16 +51,12 @@ public class VendorMoreActivity extends AppCompatActivity {
     private class VendorMoreAdapter extends ArrayAdapter<String>{
         Context context;
         String rName[];
-        String rLocation[];
-        String rDestination[];
         String rDiscription[];
 
-        VendorMoreAdapter(Context c, String name[], String location[], String destination[], String discription[]){
+        VendorMoreAdapter(Context c, String name[], String discription[]){
             super(c, R.layout.vendor_list, R.id.VendorName, name );
             this.context = c;
             this.rName = name;
-            this.rLocation = location;
-            this.rDestination = destination;
             this.rDiscription = discription;
 
         }
@@ -70,12 +66,12 @@ public class VendorMoreActivity extends AppCompatActivity {
             LayoutInflater layoutInflater = (LayoutInflater)getApplicationContext().getSystemService(context.LAYOUT_INFLATER_SERVICE);
             View view = layoutInflater.inflate(R.layout.vendor_more_list,parent, false);
             TextView name = view.findViewById(R.id.VendorMoreName);
-            TextView location = view.findViewById(R.id.vendorMoreLocation);
-            TextView destination = view.findViewById(R.id.VendorMoreDestination);
+
+            TextView discription = view.findViewById(R.id.VendorMoreDiscription);
 
             name.setText(rName[position]);
-            location.setText(rLocation[position]);
-            destination.setText(rDestination[position]);
+
+            discription.setText(rDiscription[position]);
 
             return view;
         }

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity
 {
 
     ListView vendorsListView;
-    String mName[] = {"Subway", "Pizza Hut", "Pappa John's", "McDonalds", "Qdoba", "Sodexo"};
+    String mName[] = {"Subway", "Pizza Hut", "Papa John's", "McDonalds", "Qdoba", "Sodexo"};
     String mLocation[] = {"9940 Big Rock Cove St.\n" + "Hilliard, MO 43026",
             "79 West Prince St.\n" + "Cranberry Twp, MO 16066",
             "49 Hilltop Road\n" + "Severna Park, MO 21146",

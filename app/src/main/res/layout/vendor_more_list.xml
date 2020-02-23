@@ -10,12 +10,12 @@
         android:id="@+id/VendorMoreDiscription"
         android:layout_width="250dp"
         android:layout_height="81dp"
-        android:layout_marginTop="36dp"
-        android:background="#E9E3E3"
+        android:layout_marginTop="40dp"
+        android:background="#E7E5E5"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolo "
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,49 +34,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         tools:text="Company Name" />
-
-    <TextView
-        android:id="@+id/VendorMoreDestination"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="212dp"
-        android:text="changing dest : "
-        android:textAlignment="viewStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vendorMoreLocation" />
-
-    <TextView
-        android:id="@+id/vendorMoreLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Vendors location"
-        android:textAlignment="viewStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toEndOf="@+id/pickup"
-        app:layout_constraintTop_toBottomOf="@+id/VendorMoreDiscription" />
-
-    <TextView
-        android:id="@+id/textViewD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="164dp"
-        android:text="Destination : "
-        android:textAlignment="viewStart"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pickup" />
-
-    <TextView
-        android:id="@+id/pickup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pick up location :"
-        android:textAlignment="viewStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.331"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/VendorMoreDiscription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
