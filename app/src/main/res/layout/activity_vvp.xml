@@ -11,47 +11,56 @@
         android:id="@+id/vendorBttn"
         android:layout_width="200dp"
         android:layout_height="60dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginBottom="124dp"
         android:background="@drawable/custom_textbox2"
-        android:text="@string/DonorBttn"
+        android:text="@string/VendorBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/volunBttn"
+        android:id="@+id/DropOff"
         android:layout_width="200dp"
         android:layout_height="60dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginBottom="288dp"
         android:background="@drawable/custom_textbox2"
-        android:text="@string/VolunteerBttn"
+        android:text="@string/DropOff"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vendorBttn" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/citizenBttn"
+        android:id="@+id/citizenBttn2"
         android:layout_width="200dp"
         android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="250dp"
+        android:layout_marginBottom="208dp"
         android:background="@drawable/custom_textbox2"
         android:text="@string/CitizenBttn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/volunBttn"
-        app:layout_constraintVertical_bias="0.931" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/volunBttn"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="380dp"
+        android:background="@drawable/custom_textbox2"
+        android:text="@string/VolunteerBttn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/backBttn"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/custom_button"
         android:text="@string/BackBttn"
         android:textSize="18sp"
@@ -65,9 +74,9 @@
         android:layout_height="427dp"
         android:layout_marginStart="63dp"
         android:layout_marginEnd="81dp"
-        android:layout_marginBottom="116dp"
-        app:layout_constraintBottom_toTopOf="@+id/citizenBttn"
-        app:layout_constraintEnd_toStartOf="@+id/citizenBttn"
+        android:layout_marginBottom="312dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/DropOff"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logo2" />

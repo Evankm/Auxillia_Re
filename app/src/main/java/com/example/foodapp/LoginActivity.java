@@ -27,8 +27,7 @@ public class LoginActivity extends AppCompatActivity
     private FirebaseAuth mAuth;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState)
-    {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
@@ -40,11 +39,9 @@ public class LoginActivity extends AppCompatActivity
         loginRegBtn = findViewById(R.id.loginRegBttn);
 
         // on click triggers register method to send user to register page
-        loginRegBtn.setOnClickListener(new View.OnClickListener()
-        {
+        loginRegBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 Register();
             }
         });
@@ -53,32 +50,33 @@ public class LoginActivity extends AppCompatActivity
         loginBttn.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View v)
-            {
-                // string input fields
-                final String loginEmail = loginEmailText.getText().toString();
-                String loginPassword = loginPassText.getText().toString();
+            public void onClick(View v) {
+                Login();
+
+                //string input fields
+               final String loginEmail = loginEmailText.getText().toString();
+               final String loginPassword = loginPassText.getText().toString();
 
                 //login logic
                 if (!TextUtils.isEmpty(loginEmail) && !TextUtils.isEmpty(loginPassword))
-                {
-                    mAuth.signInWithEmailAndPassword(loginEmail,loginEmail).
-                            addOnCompleteListener(new OnCompleteListener<AuthResult>()
-                            {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task)
-                                {
-                                    if(task.isSuccessful())
-                                    {
-                                        Login();
-                                    }else
-                                    {
-                                        // Display an error message so sorry
-                                    }
-                                }
-                            });
-                }}});
-    }
+               {
+                   mAuth.signInWithEmailAndPassword(loginEmail,loginPassword).
+                           addOnCompleteListener(new OnCompleteListener<AuthResult>()
+                           {
+                              @Override
+                              public void onComplete(@NonNull Task<AuthResult> task)
+                               {
+                                   if(task.isSuccessful())
+                                   {
+
+                                   }else
+                                   {
+                                       // Display an error message so sorry
+                                   }
+                               }
+                           });
+               }}});
+            }
 
     //sends user to select page
     private void Login()
@@ -94,7 +92,4 @@ public class LoginActivity extends AppCompatActivity
         Intent registerIntent = new Intent (LoginActivity.this, RegisterActivity.class);
         startActivity(registerIntent);
         finish();
-    }
-
-
-}
+    } }

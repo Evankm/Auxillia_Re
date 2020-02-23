@@ -2,18 +2,16 @@ package com.example.foodapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 public class VVPActivity extends AppCompatActivity
 {
 
     //declaring fields and buttons
-    private Button vendorBttn, volunBttn, citizenBttn, backBttn;
+    private Button vendorBttn, volunBttn, citizenBttn, backBttn, dropOffBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -24,7 +22,9 @@ public class VVPActivity extends AppCompatActivity
         //linking variables to buttons & text
         backBttn = findViewById(R.id.backBttn);
         volunBttn = findViewById(R.id.volunBttn);
-        citizenBttn = findViewById(R.id.citizenBttn);
+        citizenBttn = findViewById(R.id.citizenBttn2);
+        dropOffBtn = findViewById(R.id.DropOff);
+        vendorBttn = findViewById(R.id.vendorBttn);
 
         backBttn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,18 +33,29 @@ public class VVPActivity extends AppCompatActivity
                 toLogin();
             }
         });
-
         volunBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toVolun();
             }
         });
-
         citizenBttn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 toVendorMore();
+            }
+        });
+        dropOffBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                toDropOff();
+            }
+        });
+        vendorBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                toVendor();
             }
         });
     }
@@ -56,7 +67,6 @@ public class VVPActivity extends AppCompatActivity
         startActivity(loginIntent);
         finish();
     }
-
     //sends user to volun page
     private void toVolun()
     {
@@ -68,6 +78,19 @@ public class VVPActivity extends AppCompatActivity
     {
         Intent venMoreIntent = new Intent (VVPActivity.this, VendorMoreActivity.class);
         startActivity(venMoreIntent);
+        finish();
+    }
+    private void toDropOff()
+    {
+        Intent dropbOff = new Intent (VVPActivity.this, DropOffActivity.class);
+        startActivity(dropbOff);
+        finish();
+    }
+    //sends user to vendor page
+    private void toVendor()
+    {
+        Intent venIntent = new Intent (VVPActivity.this, VendorActivity.class);
+        startActivity(venIntent);
         finish();
     }
 }
