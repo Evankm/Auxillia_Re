@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class FoodActivity extends AppCompatActivity {
+public class VendorMoreActivity extends AppCompatActivity {
 
     //declaring fields and buttons
     Button logOutBttn;
@@ -43,7 +43,7 @@ public class FoodActivity extends AppCompatActivity {
             vendorsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    startActivity(new Intent(FoodActivity.this, MapsActivity.class));
+                    startActivity(new Intent(VendorMoreActivity.this, MapsActivity.class));
                     finish() ;
                 }
             });
@@ -96,7 +96,7 @@ public class FoodActivity extends AppCompatActivity {
     //sends user to login page
     private void toLogin()
     {
-        Intent loginIntent = new Intent (FoodActivity.this, LoginActivity.class);
+        Intent loginIntent = new Intent (VendorMoreActivity.this, LoginActivity.class);
         startActivity(loginIntent);
         finish();
     }

@@ -73,7 +73,7 @@ public class VVPActivity extends AppCompatActivity
     //sends user to food page
     private void toFood()
     {
-        Intent venMoreIntent = new Intent (VVPActivity.this, FoodActivity.class);
+        Intent venMoreIntent = new Intent (VVPActivity.this, VendorMoreActivity.class);
         startActivity(venMoreIntent);
         finish();
     }

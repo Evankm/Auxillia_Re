@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DropOffActivity">
+        <activity android:name=".DropOffActivity"/>
         <activity android:name=".VVPActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
