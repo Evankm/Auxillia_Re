@@ -69,16 +69,29 @@ public class MainActivity extends AppCompatActivity
             name.setText(rName[position]);
             location.setText(rLocation[position]);
             destination.setText(rDestination[position]);
-
             return view;
-
         }
+    }
 
-        public void logOut()
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+
+        logout.setOnClickListener(new View.OnClickListener()
         {
-            Intent loginIntent = new Intent (MainActivity.this, LoginActivity.class);
-            startActivity(loginIntent);
-            finish();
-        }
+            @Override
+            public void onClick(View view)
+            {
+                logOut();
+            }
+        });
+    }
+
+     void logOut()
+    {
+        Intent loginIntent = new Intent (MainActivity.this, LoginActivity.class);
+        startActivity(loginIntent);
+        finish();
     }
 }
