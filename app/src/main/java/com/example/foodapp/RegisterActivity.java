@@ -60,6 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
                 final String email = regEmail.getText().toString();
                 String pass = regPass.getText().toString();
                 String confirmPass = regConfirmPass.getText().toString();
+                Register();
 
                 // checking to make sure all fields are populated and passwords match
                 if(!TextUtils.isEmpty(email) && !TextUtils.isEmpty(pass)
@@ -71,9 +72,7 @@ public class RegisterActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task)
                         {
                             if(task.isSuccessful())
-                            {
-                                Register();
-                            }
+                            {}
                             else
                                 {
                                 String errorMessage = task.getException().getMessage();

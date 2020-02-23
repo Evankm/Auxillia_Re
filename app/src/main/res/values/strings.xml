@@ -20,4 +20,7 @@
     <string name="VendorBtn">Vendor</string>
     <string name="DropOff">Drop Off</string>
     <string name="Blank" />
+    <string name="foodText">Food</string>
+    <string name="qText">Quantity</string>
+    <string name="infoText">Additional Information</string>
 </resources>

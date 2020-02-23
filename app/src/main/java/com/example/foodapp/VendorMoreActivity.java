@@ -13,12 +13,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
 public class VendorMoreActivity extends AppCompatActivity {
 
+    Button backBttn;
     ListView vendorsListView;
     String mName[] = {"Subway", "Pizza Hut", "Pappa John's", "McDonalds", "Qdoba"};
     String mLocation[] = {"temp address 123", "temp address 123","temp address 123", "temp address 123", "temp address 123"};
@@ -35,7 +37,7 @@ public class VendorMoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vendor_more);
 
-
+            backBttn = findViewById(R.id.backBttn);
             vendorsListView = findViewById(R.id.VendorMoreListView);
             VendorMoreAdapter adapter = new VendorMoreAdapter(this, mName,  mDiscription);
             vendorsListView.setAdapter(adapter);
@@ -45,6 +47,13 @@ public class VendorMoreActivity extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     startActivity(new Intent(VendorMoreActivity.this, MapsActivity.class));
                     finish() ;
+                }
+            });
+            backBttn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view)
+                {
+                    toSelect();
                 }
             });
         }
@@ -76,6 +85,12 @@ public class VendorMoreActivity extends AppCompatActivity {
 
             return view;
         }
+    }
+    private void toSelect()
+    {
+        Intent venIntent = new Intent (VendorMoreActivity.this, VVPActivity.class);
+        startActivity(venIntent);
+        finish();
     }
 
 }

@@ -2,6 +2,7 @@ package com.example.foodapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,19 @@ public class VendorActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 tView.setText("We will be arriving soon to pick up food!");
+
+                final ProgressDialog pausingDialog = ProgressDialog.show(VendorActivity.this, "", "Loading..", true);
+                new Thread() {
+                    public void run() {
+                        try {
+                            Thread.sleep(10000); // The length to 'pause' for
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        pausingDialog.dismiss();
+                    }
+                }.start();
+
                 toLogin();
             }
         });
