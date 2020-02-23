@@ -2,6 +2,7 @@ package com.example.foodapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,7 @@ public class VVPActivity extends AppCompatActivity
         //linking variables to buttons & text
         backBttn = findViewById(R.id.backBttn);
         volunBttn = findViewById(R.id.volunBttn);
+        citizenBttn = findViewById(R.id.citizenBttn);
 
         backBttn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +38,13 @@ public class VVPActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 toVolun();
+            }
+        });
+
+        citizenBttn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                toVendorMore();
             }
         });
     }
@@ -53,6 +62,12 @@ public class VVPActivity extends AppCompatActivity
     {
         Intent volunIntent = new Intent (VVPActivity.this, MainActivity.class);
         startActivity(volunIntent);
+        finish();
+    }
+    private void toVendorMore()
+    {
+        Intent venMoreIntent = new Intent (VVPActivity.this, VendorMoreActivity.class);
+        startActivity(venMoreIntent);
         finish();
     }
 }

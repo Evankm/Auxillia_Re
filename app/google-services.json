@@ -52,6 +52,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "886460414572-g0og17riejrh8a8gbip8uadenv6oh657.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foodapp",
+            "certificate_hash": "f25f1ccfe4ce75a734bc329e602f754e75a64933"
+          }
+        },
+        {
           "client_id": "886460414572-uvmr2o7qsajv6837uv284tvqqg5elchi.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
