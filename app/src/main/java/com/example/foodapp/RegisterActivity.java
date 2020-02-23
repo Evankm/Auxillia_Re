@@ -44,4 +44,13 @@ public class RegisterActivity extends AppCompatActivity {
         startActivity(loginIntent);
         finish();
     }
+
+    //sends user to select page
+    private void Register()
+    {
+        Intent registerIntent = new Intent (RegisterActivity.this, VVPActivity.class);
+        startActivity(registerIntent);
+        finish();
+    }
+
 }
