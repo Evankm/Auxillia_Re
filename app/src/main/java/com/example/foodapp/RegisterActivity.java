@@ -32,6 +32,15 @@ public class RegisterActivity extends AppCompatActivity {
                 toLogin();
             }
         });
+
+        regLoginBtn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                toVend();
+            }
+        });
     }
 
 
@@ -50,6 +59,13 @@ public class RegisterActivity extends AppCompatActivity {
     {
         Intent registerIntent = new Intent (RegisterActivity.this, VVPActivity.class);
         startActivity(registerIntent);
+        finish();
+    }
+
+    private void toVend()
+    {
+        Intent vendIntent = new Intent (RegisterActivity.this, VendorButtonActivity.class);
+        startActivity(vendIntent);
         finish();
     }
 
