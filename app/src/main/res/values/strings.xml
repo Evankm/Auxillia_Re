@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">Auxillia</string>
     <string name="title_activity_maps">Map</string>
+    <string name="loginBttn">Login</string>
+    <string name="Emailhint">Email:</string>
+    <string name="Passwordhint">Password:</string>
+    <string name="RegisterBttn">New User?</string>
+    <string name="RegLoginBttn">Current User?</string>
+    <string name="Cpass">Confirm Password:</string>
+    <string name="logoutBttn">Logout</string>
+    <string name="DonorBttn">Donor</string>
+    <string name="VolunteerBttn">Volunteer</string>
+    <string name="CitizenBttn">Citizen</string>
+    <string name="BackBttn">Back</string>
+    <string name="CurrentBttn">Current User?</string>
+    <string name="vendorBttn">AVAILABLE</string>
+    <string name="RegBttn">Register</string>
 </resources>
