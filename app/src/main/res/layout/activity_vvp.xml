@@ -14,6 +14,7 @@
         android:layout_marginTop="138dp"
         android:layout_marginBottom="73dp"
         android:text="@string/DonorBttn"
+        android:background="@drawable/custom_textbox2"
         app:layout_constraintBottom_toTopOf="@+id/volunBttn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -27,6 +28,7 @@
         android:layout_marginTop="72dp"
         android:layout_marginBottom="62dp"
         android:text="@string/VolunteerBttn"
+        android:background="@drawable/custom_textbox2"
         app:layout_constraintBottom_toTopOf="@+id/citizenBttn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -40,6 +42,7 @@
         android:layout_marginTop="38dp"
         android:layout_marginBottom="278dp"
         android:text="@string/CitizenBttn"
+        android:background="@drawable/custom_textbox2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -50,12 +53,13 @@
         android:id="@+id/backBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
         android:layout_marginTop="618dp"
         android:layout_marginBottom="66dp"
         android:background="@drawable/custom_button"
         android:text="@string/BackBttn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="19dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
