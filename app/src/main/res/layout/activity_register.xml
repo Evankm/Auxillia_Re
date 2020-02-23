@@ -4,62 +4,123 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:background="#F0F0F0"
+    tools:context=".RegisterActivity"><![CDATA[
+
+
+
+
+
+
+
+    app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ]]>
 
     <EditText
         android:id="@+id/regEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="224dp"
         android:background="@drawable/custom_textbox"
+        android:drawableLeft="@drawable/ic_account_circle_black_24dp"
         android:ems="10"
         android:hint="@string/Emailhint"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/regPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="248dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/custom_textbox"
+        android:drawableLeft="@drawable/ic_security_black_24dp"
         android:ems="10"
         android:hint="@string/Passwordhint"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/regEmail" />
 
     <EditText
         android:id="@+id/regConfirmPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="352dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="344dp"
         android:background="@drawable/custom_textbox"
+        android:drawableLeft="@drawable/ic_security_black_24dp"
         android:ems="10"
         android:hint="@string/Cpass"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regPass" />
 
     <Button
         android:id="@+id/currentUserBttn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="152dp"
-        android:layout_marginBottom="140dp"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/custom_button"
         android:text="@string/CurrentBttn"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Go Back" />
 
     <Button
-        android:id="@+id/regBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/RegisterBtn"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="450dp" />
+        android:id="@+id/regBttn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/RegBttn"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regConfirmPass" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="274dp"
+        android:layout_height="427dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/regConfirmPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logo2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,12 +39,12 @@ public class RegisterActivity extends AppCompatActivity {
         regBtn = findViewById(R.id.regBtn);
 
         // on click triggers toLogin method to send user to login page
-        regLoginBtn.setOnClickListener(new View.OnClickListener()
+        regBttn.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                toLogin();
+                Register();
             }
         });
 
@@ -82,15 +82,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-
-
-
-    //sends user to login page
-    private void toLogin()
-    {
-        Intent loginIntent = new Intent (RegisterActivity.this, LoginActivity.class);
-        startActivity(loginIntent);
-        finish();
     }
 
     //sends user to select page
@@ -100,5 +91,4 @@ public class RegisterActivity extends AppCompatActivity {
         startActivity(registerIntent);
         finish();
     }
-
 }
