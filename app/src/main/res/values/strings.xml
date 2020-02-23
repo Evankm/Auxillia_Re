@@ -9,4 +9,8 @@
     <string name="Cpass">Confirm Password:</string>
     <string name="logoutBttn">Logout</string>
     <string name="DonorBttn">Donor</string>
+    <string name="VolunteerBttn">Volunteer</string>
+    <string name="CitizenBttn">Citizen</string>
+    <string name="BackBttn">Back</string>
+    <string name="CurrentBttn">Current User?</string>
 </resources>

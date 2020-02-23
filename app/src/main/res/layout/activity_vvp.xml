@@ -10,30 +10,41 @@
         android:id="@+id/vendorBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="67dp"
         android:text="@string/DonorBttn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/volunBttn"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/volunBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="180dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.547" />
+        android:layout_marginStart="152dp"
+        android:layout_marginBottom="71dp"
+        android:text="@string/VolunteerBttn"
+        app:layout_constraintBottom_toTopOf="@+id/citizenBttn"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/citizenBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="172dp"
-        android:layout_marginBottom="144dp"
-        android:text="Button"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="212dp"
+        android:text="@string/CitizenBttn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/backBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="272dp"
+        android:text="@string/BackBttn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.918" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,7 +14,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -30,6 +29,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        logout = findViewById(R.id.logOutBttn);
 
         vendorsListView = findViewById(R.id.listView);
         VendorAdapter adapter = new VendorAdapter(this, mName, mLocation, mDestination);
@@ -38,6 +38,12 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 startActivity(new Intent(MainActivity.this, MapsActivity.class));
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                logOut();
             }
         });
     }
@@ -73,20 +79,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    protected void onStart()
-    {
-        super.onStart();
-
-        logout.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                logOut();
-            }
-        });
-    }
 
      void logOut()
     {
