@@ -23,7 +23,7 @@ public class VendorMoreActivity extends AppCompatActivity {
     String mName[] = {"Subway", "Pizza Hut", "Pappa John's", "McDonalds", "Qdoba"};
     String mLocation[] = {"temp address 123", "temp address 123","temp address 123", "temp address 123", "temp address 123"};
     String mDestination [] = {"temp address 123", "temp address 123","temp address 123", "temp address 123", "temp address 123"};
-    String mDiscription [] = {"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolo",
+    String mDiscription [] = {"heyo ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolo",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolo",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolo",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolo",
@@ -72,10 +72,12 @@ public class VendorMoreActivity extends AppCompatActivity {
             TextView name = view.findViewById(R.id.VendorMoreName);
             TextView location = view.findViewById(R.id.vendorMoreLocation);
             TextView destination = view.findViewById(R.id.VendorMoreDestination);
+            TextView discription = view.findViewById(R.id.VendorMoreDiscription);
 
             name.setText(rName[position]);
             location.setText(rLocation[position]);
             destination.setText(rDestination[position]);
+            discription.setText(rDiscription[position]);
 
             return view;
         }
